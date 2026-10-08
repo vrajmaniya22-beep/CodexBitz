@@ -1,0 +1,39 @@
+.process-step {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--accent-shade);
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+.process-step:first-child {
+  border-top: 1px solid var(--accent-shade);
+}
+
+.process-num {
+  width: 100px;
+  transition: color 0.5s ease;
+}
+
+.process-title {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-primary);
+  transition: color 0.5s ease, -webkit-text-stroke 0.5s ease, transform 0.5s ease;
+}
+
+.process-step.active {
+  opacity: 1;
+}
+
+.process-step.active .process-num {
+  color: var(--accent-yellow);
+}
+
+.process-step.active .process-title {
+  color: var(--text-primary);
+  -webkit-text-stroke: 0px transparent;
+  transform: translateX(20px);
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-primary: #101010;
+  --text-primary: #E4E5E0;
+  --text-white: #FFFFFF;
+  --accent-yellow: #F2DF29;
+  --accent-shade: #515150;
+  --text-muted: #949492;
+  
+  --cursor-size: 8px;
+  --cursor-color: var(--accent-yellow);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (pointer: fine) {
+  /* Hide default cursor on devices with fine pointer (mouse) */
+  body {
+    cursor: none;
+  }
+  
+  a, button, [role="button"], input, select, textarea {
+    cursor: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
+::selection {
+  background-color: var(--accent-yellow);
+  color: var(--bg-primary);
+}
+
+/* Base Typography Classes */
+.h1-hero {
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.h2-section {
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 5rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.mono-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
